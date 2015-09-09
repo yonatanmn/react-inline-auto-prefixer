@@ -1,6 +1,6 @@
 {
-  "name": "react-inline-auto-prefixer",
-  "version": "0.3.0",
+  "name": "auto-prefixer",
+  "version": "0.3.1",
   "description": "react autoPrefixer",
   "main": "dist/react-inline-auto-prefixer.js",
   "scripts": {

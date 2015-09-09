@@ -104,7 +104,7 @@ var autoprefix = require('autoprefix')(true);
 ### Installation
 
 ```sh
-$ npm i ...
+$ npm install auto-prefixer --save
 ```
 
 
