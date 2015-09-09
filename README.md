@@ -28,16 +28,15 @@ var Component = React.createClass({
      style1:{
         justifyContent: 'space-between',
         overflow: 'auto',
-        flexShrink': 0,
-   },
-   style2:{
-     nested1:{
-       display: 'flex',
-       width: 'calc(100% - 10px)'
-    }
-  }
-
-  })
+        flexShrink': 0
+      },
+      style2:{
+        nested1:{
+          display: 'flex',
+          width: 'calc(100% - 10px)'
+        }
+      }
+    })
 })
 
 ```
