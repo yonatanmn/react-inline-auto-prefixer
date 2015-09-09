@@ -28,7 +28,7 @@ var Component = React.createClass({
      style1:{
         justifyContent: 'space-between',
         overflow: 'auto',
-        flexShrink': 0
+        flexShrink: 0
       },
       style2:{
         nested1:{
