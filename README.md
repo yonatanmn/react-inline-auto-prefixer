@@ -14,10 +14,10 @@ var Component = React.createClass({
   render() {
       return (
         <div style={autoprefix({flexDirection:'row'})>
-            auto-prefixes with every render (suitable when state/props                changes style)
+            auto-prefixes with every render (suitable when state/props changes style)
         </div>
         <div style={this.styleSheet.style1)>
-            styleSheet will only be auto-prefixed once on mount - more                 performant
+            styleSheet will only be auto-prefixed once on mount - more performant
         </div>
         <div style={this.styleSheet.style2.nested1)>
             works also when nested
