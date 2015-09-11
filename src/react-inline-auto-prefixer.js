@@ -73,6 +73,10 @@ let neededCssValues = {
 };
 
 let clientPrefix = (function vendorPrefix(){
+  if(typeof navigator === 'undefined') {
+    return []
+  }
+  
   let sUsrAg = navigator.userAgent;
 
   if(includes(sUsrAg, 'Chrome')) { return webkit; }
@@ -215,8 +219,8 @@ function checkAndAddPrefix(styleObj, key, val, allVendors){
 
 
 function autoPrefixer(obj, allVendors){
-  Object.keys(obj).forEach( (key) => {
-    let val = obj[key];
+  obj && Object.keys(obj).forEach( (key) => {
+    let val = obj[key] || '';
     if (typeof val === 'object'){
       autoPrefixer(val, allVendors);
     } else {
