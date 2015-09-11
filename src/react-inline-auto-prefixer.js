@@ -73,6 +73,10 @@ let neededCssValues = {
 };
 
 let clientPrefix = (function vendorPrefix(){
+  if(typeof navigator === 'undefined') {
+    return []
+  }
+  
   let sUsrAg = navigator.userAgent;
 
   if(includes(sUsrAg, 'Chrome')) { return webkit; }
