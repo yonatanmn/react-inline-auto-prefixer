@@ -17,6 +17,7 @@ let webkitMoz = [webkitPrefix, mozPrefix];
 let webkitMozO = [webkitPrefix, mozPrefix, oPrefix];
 let webkitMozMs = [webkitPrefix, mozPrefix, msPrefix];
 let webkitMs = [webkitPrefix, msPrefix];
+let allPrefixes = [webkitPrefix, msPrefix, mozPrefix, oPrefix];
 
 let neededRules = {
   alignContent: webkit,
@@ -73,6 +74,9 @@ let neededCssValues = {
 };
 
 let clientPrefix = (function vendorPrefix(){
+  if(typeof navigator === 'undefined') { //in server rendering
+        return allPrefixes; //also default when not passing true to 'all vendors' explicitly
+  }
   let sUsrAg = navigator.userAgent;
 
   if(includes(sUsrAg, 'Chrome')) { return webkit; }
