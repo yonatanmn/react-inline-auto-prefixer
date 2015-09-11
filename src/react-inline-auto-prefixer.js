@@ -222,7 +222,7 @@ function autoPrefixer(obj, allVendors){
   Object.keys(obj).forEach( (key) => {
     let val = obj[key];
     if (typeof val === 'object'){
-      autoPrefixer(val, allVendors);
+      autoPrefixer(val, allVendors);  //recursion for nested objects
     } else {
       obj = checkAndAddPrefix(obj, key, val, allVendors);
     }
@@ -231,7 +231,9 @@ function autoPrefixer(obj, allVendors){
 }
 
 function gate(objOrBool, optionalBoolean = false){
-  //console.log('objOrBool? ' + typeof objOrBool);
+  if (typeof objOrBool === 'undefined'){
+    return {};
+  }
   if (typeof objOrBool === 'boolean'){
     return function(obj){
       return autoPrefixer(obj, objOrBool);
