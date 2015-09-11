@@ -219,8 +219,8 @@ function checkAndAddPrefix(styleObj, key, val, allVendors){
 
 
 function autoPrefixer(obj, allVendors){
-  Object.keys(obj).forEach( (key) => {
-    let val = obj[key];
+  obj && Object.keys(obj).forEach( (key) => {
+    let val = obj[key] || '';
     if (typeof val === 'object'){
       autoPrefixer(val, allVendors);
     } else {
