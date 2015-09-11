@@ -1,3 +1,4 @@
 {
+  "optional": ["runtime"],
   "blacklist": ["useStrict"]
 }

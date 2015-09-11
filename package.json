@@ -13,7 +13,15 @@
     "type": "git",
     "url": "https://github.com/yonatanmn/react-inline-auto-prefixer.git"
   },
-  "keywords": ["react","inline style", "auto", "prefix", "autoprefixer", "autoprefix", "flex"],
+  "keywords": [
+    "react",
+    "inline style",
+    "auto",
+    "prefix",
+    "autoprefixer",
+    "autoprefix",
+    "flex"
+  ],
   "author": "Yonatan Schreiber <yonatanmn@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -23,6 +31,7 @@
   "devDependencies": {
     "babel-core": "^5.2.17",
     "babel-eslint": "^4.0.5",
+    "babel-runtime": "^5.8.20",
     "babelify": "^6.0.0",
     "browserify": "^11.0.1",
     "chai": "^3.2.0",
