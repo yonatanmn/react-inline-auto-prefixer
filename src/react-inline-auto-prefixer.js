@@ -231,13 +231,14 @@ function autoPrefixer(obj, allVendors){
 }
 
 function gate(objOrBool, optionalBoolean = false){
-  if (typeof objOrBool === 'undefined'){
-    return {};
-  }
+
   if (typeof objOrBool === 'boolean'){
     return function(obj){
       return autoPrefixer(obj, objOrBool);
     };
+  }
+  if (!objOrBool){
+    return {};
   }
   else {return autoPrefixer(objOrBool, optionalBoolean); } // default: don't include all browsers
 }
