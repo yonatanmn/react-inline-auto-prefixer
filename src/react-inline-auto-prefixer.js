@@ -1,6 +1,6 @@
 'use strict';
 
-import utils from 'utils.js';
+import utils from './utils.js';
 let {capitalize, includes, values} = utils;
 
 let webkitPrefix = 'Webkit';
