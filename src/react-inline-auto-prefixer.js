@@ -84,6 +84,8 @@ let clientPrefix = (function vendorPrefix(){
   else if (includes(sUsrAg, 'Opera')) { return webkitO; }
   else if (includes(sUsrAg, 'Firefox')) { return moz; }
   else if (includes(sUsrAg, 'MSIE')) { return ms; }
+  
+  return [];
 })();
 
 function checkAndAddPrefix(styleObj, key, val, allVendors){
